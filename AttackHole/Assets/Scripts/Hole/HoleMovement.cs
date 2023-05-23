@@ -9,9 +9,14 @@ public class HoleMovement : MonoBehaviour
 
     private NavMeshAgent agent;
 
-    private void Awake()
+    private Hole hole;
+    
+    public HoleMovement Init(Hole hole)
     {
+        this.hole = hole;
         agent = GetComponent<NavMeshAgent>();
+
+        return this;
     }
 
     private void Update()
